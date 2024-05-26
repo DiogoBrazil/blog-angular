@@ -1,11 +1,13 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-big-card',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterLink
   ],
   templateUrl: './big-card.component.html',
   styleUrl: './big-card.component.css'
@@ -15,6 +17,7 @@ export class BigCardComponent implements OnInit {
   @Input() photoCover: string = ""
   @Input() cardTitle: string = ""
   @Input() cardDescription: string = ""
+  @Input() Id: string = "0"
 
   constructor() {
   }
